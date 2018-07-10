@@ -6,7 +6,6 @@ import (
 	"strings"
 	"sync"
 	"time"
-	"strconv"
 	"os"
 	"io"
 )
@@ -43,7 +42,7 @@ func timer(){
 	}
 }
 func DownLoadTest(){
-	url := `http://f8.volumes.cc/08e8cf0d1530003111/0082/50791/%5BMobi%5D%5BVol.moe%5D%5Bjjs%5DVol_003.mobi`
+	url := `https://codeload.github.com/iikira/BaiduPCS-Go/zip/v3.5.3`
 	req,err := http.NewRequest("GET",url,nil)
 	if err != nil {
 		fmt.Println(err)
@@ -56,6 +55,7 @@ func DownLoadTest(){
 	}
 	defer resp.Body.Close()
 	fmt.Println(url)
+	fmt.Println(resp.Header.Get("Content-Disposition"))
 	file := strings.SplitAfter(url,"/")
 	fmt.Println("file:",file[len(file)-1],"start download,please wait.")
 	for i,v := range resp.Header{
@@ -86,11 +86,8 @@ func DownLoadInit(url string)error{
 		return err
 	}
 	defer resp.Body.Close()
-	filebuf.totalsize,err = strconv.ParseInt( resp.Header.Get("Content-Length"),10,64)
-	if err != nil {
-		fmt.Println(err)
-		return err
-	}
+	fmt.Println(resp.Request.MultipartForm.File)
+	filebuf.totalsize=resp.ContentLength
 	fmt.Println(filebuf.totalsize)
 	file := strings.SplitAfter(url,"/")
 	fmt.Println("file:",file[len(file)-1],"start download,please wait.")
