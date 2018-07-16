@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"time"
 	"errors"
+	"strconv"
 )
 
 var s [20][20]int
@@ -18,6 +19,9 @@ var snake struct{
 	len int
 	pos []pos
 	keychan chan int
+	point int
+	start int
+	hard int
 }
 
 var color = []termbox.Attribute{
@@ -62,7 +66,7 @@ func keyborad(){
 		case termbox.KeyEsc:
 			fmt.Println("exec game")
 			snake.keychan<- 0
-		case termbox.KeyBackspace:
+		case termbox.KeySpace:
 			snake.keychan<- 2
 
 		case termbox.KeyArrowUp:
@@ -119,18 +123,25 @@ func timer(){
 func tker(){
 	if snake.len<10{
 		tk = time.NewTicker(750*time.Millisecond)
+		snake.hard =1
 	}else if snake.len<20{
 		tk = time.NewTicker(500*time.Millisecond)
+		snake.hard =2
 	}else if snake.len<40{
 		tk = time.NewTicker(350*time.Millisecond)
+		snake.hard =3
 	}else if snake.len<80{
 		tk = time.NewTicker(275*time.Millisecond)
+		snake.hard =4
 	}else if snake.len<160{
 		tk = time.NewTicker(200*time.Millisecond)
+		snake.hard =5
 	}else if snake.len<320{
 		tk = time.NewTicker(150*time.Millisecond)
+		snake.hard =6
 	}else {
 		tk = time.NewTicker(100*time.Millisecond)
+		snake.hard =7
 	}
 }
 //初始化蛇，开始GAME
@@ -145,7 +156,6 @@ func SnakeInit() {
 
 	go keyborad()
 	go timer()
-	start := 0
 	for {
 		termbox.Clear(coldef, coldef)
 		snakePrintf()
@@ -154,16 +164,22 @@ func SnakeInit() {
 			if cmd ==0{
 				return
 			}else if cmd == 1{
-				if start ==0 {
+				if snake.start ==0 {
 					ok := snakemove()
 					if !ok {
-						fmt.Println("game over")
-						start = 1
+						snake.start = 2
 					}
 				}
 			}else if cmd ==2{
-				start=0
-				sinit()
+				if snake.start ==0{
+					snake.start =1
+				}else if snake.start==1{
+					snake.start=0
+				}else {
+					snake.start=0
+					sinit()
+				}
+
 			}
 		}
 }
@@ -216,7 +232,9 @@ func snakemove()bool {
 	case 2:
 		x, y := snake.pos[0].x, snake.pos[0].y
 		//fmt.Println(x,y,s[x][y+1])
-		if s[x-1][y] != 0 && s[x-1][y] != 6 {
+		if s[x-1][y] != 0 && s[x-1][y] != 6 && x-1!=snake.pos[snake.len-1].x && y!=snake.pos[snake.len-1].y && snake.len >1{
+			return false
+		} else if s[x-1][y] != 0 && s[x-1][y] != 6 && snake.len == 1{
 			return false
 		} else if s[x-1][y] == 6 {
 			eat()
@@ -225,27 +243,33 @@ func snakemove()bool {
 		}
 	case 8:
 		x, y := snake.pos[0].x, snake.pos[0].y
-		if s[x+1][y] != 0 && s[x+1][y] != 6 {
+		if s[x+1][y] != 0 && s[x+1][y] != 6 && x+1!=snake.pos[snake.len-1].x && y!=snake.pos[snake.len-1].y && snake.len >1{
 			return false
-		} else if s[x+1][y] == 6 {
+		} else if s[x+1][y] != 0 && s[x+1][y] != 6 && snake.len ==1{
+			return false
+		}else if s[x+1][y] == 6{
 			eat()
 		} else {
 			move()
 		}
 	case 4:
 		x, y := snake.pos[0].x, snake.pos[0].y
-		if s[x][y-1] != 0 && s[x][y-1] != 6 {
+		if s[x][y-1] != 0 && s[x][y-1] != 6 && x!=snake.pos[snake.len-1].x && y-1 !=snake.pos[snake.len-1].y && snake.len >1{
 			return false
-		} else if s[x][y-1] == 6 {
+		}else if s[x][y-1] != 0 && s[x][y-1] != 6 && snake.len == 1{
+			return false
+		}else if s[x][y-1] == 6 {
 			eat()
 		} else {
 			move()
 		}
 	case 6:
 		x, y := snake.pos[0].x, snake.pos[0].y
-		if s[x][y+1] != 0 && s[x][y+1] != 6 {
+		if s[x][y+1] != 0 && s[x][y+1] != 6 && x!=snake.pos[snake.len-1].x && y+1 !=snake.pos[snake.len-1].y && snake.len >1 {
 			return false
-		} else if s[x][y+1] == 6 {
+		} else if  s[x][y+1] != 0 && s[x][y+1] != 6 && snake.len ==1 {
+			return false
+		}else if s[x][y+1] == 6 {
 			eat()
 		} else {
 			move()
@@ -267,12 +291,13 @@ func move(){
 	case 6:
 		snake.pos[0].y++
 	}
-	s[snake.pos[0].x][snake.pos[0].y]=3
+	//s[snake.pos[0].x][snake.pos[0].y]=3
 	for i:=1;i<snake.len;i++{
 		x,y ,snake.pos[i].x,snake.pos[i].y =snake.pos[i].x,snake.pos[i].y,x,y
 		s[snake.pos[i].x][snake.pos[i].y]=1
 	}
 	s[x][y]=0
+	s[snake.pos[0].x][snake.pos[0].y]=3
 }
 //吃
 func eat(){
@@ -293,6 +318,7 @@ func eat(){
 		x,y ,snake.pos[i].x,snake.pos[i].y =snake.pos[i].x,snake.pos[i].y,x,y
 		s[snake.pos[i].x][snake.pos[i].y]=1
 	}
+	snake.point += 10
 	random()
 }
 
@@ -327,8 +353,32 @@ func snakePrintf(){
 			termbox.SetCell(i,j,' ',color[s[i/2][j]],color[s[i/2][j]])
 		}
 	}
+	if snake.start == 2 {
+		snakePoint(15,10,0,"Game Over")
+	}else if snake.start == 1{
+		snakePoint(15,10,0,"Game Pause")
+	}
+	snakePoint(45,4,0,"SCORE:"+strconv.Itoa(snake.point))
+
+	snakePoint(45,8,0,"Hard:"+strconv.Itoa(snake.hard))
+
+	snakePoint(45,6,0,"TIME:"+time.Now().Format("2006-01-02 15:04:05"))
+
 	termbox.Flush()
 }
+
+func snakePoint(x,y,z int,buf string ){
+	for i:=0;i<len(buf);i++{
+		termbox.SetCell(x,y,rune(buf[i]),termbox.ColorYellow,termbox.ColorBlack)
+		if z ==0{
+			x++
+		}else {
+			y++
+		}
+	}
+}
+
+
 
 func ppprint(){
 	fmt.Println("-----------")

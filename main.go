@@ -1,18 +1,29 @@
 package main
 
-import (
-	"newknowlage/Mypprof"
+import(
+	"fmt"
+	"newknowlage/test"
 )
 
-func main() {
 
+
+func main() {
+	fmt.Println("Start...")
 	//snake.SnakeInit()
 	//snake.Snake()
-	Mypprof.Mypprofstart()
-	defer Mypprof.MypprofStop()
-	//MMap1()
-	MMap2()
+	//fmt.Println("myuser&#39; or &#39;foo&#39; = &#39;foo&#39; #")
+	//fmt.Println(template.HTMLEscapeString("myuser' or 'foo' = 'foo' #"))
+	//fmt.Println(strconv.Quote("myuser&#39; or &#39;foo&#39; = &#39;foo&#39; #"))
+	//fmt.Println(strconv.QuoteToGraphic("myuser&#39; or &#39;foo&#39; = &#39;foo&#39; #"))
+	//fmt.Println(template.HTMLEscapeString("-++- --/;**/ !!~~~~!"))
+	//fmt.Println(html.EscapeString("myuser' or 'foo' = 'foo' #"+"-++- --/'**/ !!~~~~!"))
+	//fmt.Println(InjectionDefense.SQLandXSSencode("myuser' or 'foo' = 'foo' #"+"-++- --/'**/ !!~~~~!"))
+	//fmt.Println(InjectionDefense.SQLandXSSdecode("myuser&#39; or &#39;foo&#39; = &#39;foo&#39; #-++- --/&#39;**/ !!~~~~!"))
 
+	test.MYsqlTest()
+
+
+	//test.MyMap()
 	//var cmd string
 	//for{
 	//	fmt.Println("downurl-or-CMD:")
@@ -26,23 +37,7 @@ func main() {
 	//download.DownLoadInit("http://mydmplus.com/res/Mydm/Mydm20180623.zip")
 	//download.DownLoadTest()
 
-}
-func MMap1(){
 
-	for i := 0; i < 100; i++ {
-		buf := make(map[int]string, 10240)
-		for i := 0; i < 10240; i++ {
-			buf[i*10] = "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
-		}
-	}
+
 }
 
-func MMap2(){
-
-	for i := 0; i < 100; i++ {
-		buf1 := make(map[int]string)
-		for i := 0; i < 10240; i++ {
-			buf1[i*10+1] = "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
-		}
-	}
-}

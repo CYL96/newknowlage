@@ -1,4 +1,4 @@
-package mysql
+package xsql
 
 /*
 
@@ -225,7 +225,7 @@ func (s *XSqlOrder) Insert(values map[string]interface{}, name string) {
 			{
 
 				valueString .WriteString( "\"")
-				valueString .WriteString( value.(string) )
+				valueString .WriteString( EncodeSQLandXSS(value.(string)) )
 				valueString .WriteString("\"")
 				if index != len(values) {
 					valueString .WriteString( ",")
@@ -237,7 +237,7 @@ func (s *XSqlOrder) Insert(values map[string]interface{}, name string) {
 			{
 
 				valueString .WriteString( "\"")
-				valueString .WriteString( string(value.([]byte)))
+				valueString .WriteString( EncodeSQLandXSS(string(value.([]byte))))
 				valueString .WriteString("\"")
 				if index != len(values) {
 					valueString .WriteString( ",")
@@ -313,7 +313,7 @@ func (s *XSqlOrder) Insert_(values map[string]interface{}, name string) {
 			{
 
 				valueString.WriteString( "'")
-				valueString.WriteString(value.(string))
+				valueString.WriteString(EncodeSQLandXSS(value.(string)))
 				valueString.WriteString("'")
 				if index != len(values) {
 					valueString.WriteString( ",")
@@ -336,7 +336,7 @@ func (s *XSqlOrder) Insert_(values map[string]interface{}, name string) {
 		//sorted_keys = append(sorted_keys, key)
 	}
 	s.reqBuffer.WriteString(") VALUES ( ")
-	s.reqBuffer.WriteString( valueString.String())
+	s.reqBuffer.WriteString( EncodeSQLandXSS(valueString.String()))
 	//s.reqString = Substr(reqString, 0, len(reqString)-1)
 	s.reqBuffer.WriteString( ")")
 
@@ -614,6 +614,7 @@ func (s *XSqlOrder) Delete(name string) {
 	s.reqBuffer.WriteString(name)
 	//s.selectKeys = make(map[string]string)
 }
+
 func (s *XSqlOrder) Where(values map[string]interface{}) {
 	s.reqBuffer.WriteString( " where ")
 	var index = 0
@@ -654,7 +655,7 @@ func (s *XSqlOrder) Where(values map[string]interface{}) {
 				s.reqBuffer.WriteString( key)
 				s.reqBuffer.WriteString("=")
 				s.reqBuffer.WriteString("\"")
-				s.reqBuffer.WriteString(value.(string))
+				s.reqBuffer.WriteString(EncodeSQLandXSS(value.(string)))
 				s.reqBuffer.WriteString("\"")
 			}
 			break
@@ -663,7 +664,7 @@ func (s *XSqlOrder) Where(values map[string]interface{}) {
 				s.reqBuffer.WriteString( key)
 				s.reqBuffer.WriteString("=")
 				s.reqBuffer.WriteString("\"")
-				s.reqBuffer.WriteString(string(value.([]byte)))
+				s.reqBuffer.WriteString(EncodeSQLandXSS(string(value.([]byte))))
 			}
 			break
 		}
@@ -673,6 +674,8 @@ func (s *XSqlOrder) Where(values map[string]interface{}) {
 	}
 	//s.reqString = Substr(reqString, 0, len(reqString)-4)
 }
+
+//此条函数最好不要传参，防止SQL注入
 func (s *XSqlOrder) AddSuf(suffixes string) { //添加sql尾部参数
 	s.reqBuffer.WriteString(" ")
 	s.reqBuffer.WriteString(suffixes)
@@ -706,6 +709,7 @@ func (s *XSqlOrder) Value() int64 {
 	return 0
 }
 
+//此条函数最好不要传入用户的输入。配合Where传入用户参数，Addsuf传入固定参数。
 func (s *XSqlOrder) Qurey(suffixes string) { //执行sql语句
 	//s.colType = make(map[string]string)
 	s.ClearBuffer()
@@ -971,7 +975,7 @@ func byte2Float(value []byte) float64 {
 	return result
 }
 func byte2String(value []byte) string {
-	return string(value)
+	return DecodeSQLandXSS(string(value))
 }
 func getInitValue(pval []byte) interface{} {
 	result_int,ok := ParseInt(pval)
