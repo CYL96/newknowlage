@@ -1,7 +1,0 @@
-package key
-
-
-func FileOpen(){
-
-
-}
