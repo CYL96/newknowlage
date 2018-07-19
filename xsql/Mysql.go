@@ -54,7 +54,8 @@ type XSqlOrder struct {
 	xs        *XSql
 	reqBuffer bytes.Buffer
 	//selectKeys map[string]string
-	perparevalues []interface{}
+	whereValues []interface{}
+	insertValues []interface{}
 
 	tableName []string
 	colType   map[string]string
@@ -531,7 +532,7 @@ func (s *XSqlOrder) MulitInsert(list []map[string]interface{}, name string) {
 func (s *XSqlOrder) InsertPerpare(values map[string]interface{}, name string) {
 
 	s.ClearBuffer()
-	s.perparevalues = make([]interface{}, len(values))
+	s.insertValues = make([]interface{}, len(values))
 
 	s.reqBuffer.WriteString("INSERT INTO ")
 	s.reqBuffer.WriteString(name)
@@ -547,32 +548,32 @@ func (s *XSqlOrder) InsertPerpare(values map[string]interface{}, name string) {
 		switch value.(type) {
 		case int:
 			{
-				s.perparevalues[index] = strconv.FormatInt(int64(value.(int)), 10)
+				s.insertValues[index] = strconv.FormatInt(int64(value.(int)), 10)
 			}
 			break
 		case int64:
 			{
-				s.perparevalues[index] = strconv.FormatInt(value.(int64), 10)
+				s.insertValues[index] = strconv.FormatInt(value.(int64), 10)
 			}
 			break
 		case float32:
 			{
-				s.perparevalues[index] = strconv.FormatFloat(float64(value.(float32)), 'f', 6, 32)
+				s.insertValues[index] = strconv.FormatFloat(float64(value.(float32)), 'f', 6, 32)
 			}
 			break
 		case float64:
 			{
-				s.perparevalues[index] = strconv.FormatFloat(value.(float64), 'f', 6, 64)
+				s.insertValues[index] = strconv.FormatFloat(value.(float64), 'f', 6, 64)
 			}
 			break
 		case string:
 			{
-				s.perparevalues[index] = EncodeXSS(value.(string))
+				s.insertValues[index] = EncodeXSS(value.(string))
 			}
 			break
 		case []byte:
 			{
-				s.perparevalues[index] = EncodeXSS(string(value.([]byte)))
+				s.insertValues[index] = EncodeXSS(string(value.([]byte)))
 			}
 			break
 		}
@@ -754,7 +755,7 @@ func (s *XSqlOrder) UpdatePerpare(values map[string]interface{}, name string) {
 	s.reqBuffer.WriteString(name)
 	s.reqBuffer.WriteString(" SET ")
 	//s.selectKeys = make(map[string]string)
-	s.perparevalues = make([]interface{},len(values))
+	s.insertValues = make([]interface{},len(values))
 	var index = 0
 	for key, value := range values {
 
@@ -763,42 +764,42 @@ func (s *XSqlOrder) UpdatePerpare(values map[string]interface{}, name string) {
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.perparevalues[index] = strconv.FormatInt(int64(value.(int)), 10)
+				s.insertValues[index] = strconv.FormatInt(int64(value.(int)), 10)
 			}
 			break
 		case int64:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.perparevalues[index] = strconv.FormatInt(value.(int64), 10)
+				s.insertValues[index] = strconv.FormatInt(value.(int64), 10)
 			}
 			break
 		case float32:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.perparevalues[index] = strconv.FormatFloat(float64(value.(float32)), 'f', 6, 32)
+				s.insertValues[index] = strconv.FormatFloat(float64(value.(float32)), 'f', 6, 32)
 			}
 			break
 		case float64:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.perparevalues[index] = strconv.FormatFloat(value.(float64), 'f', 6, 64)
+				s.insertValues[index] = strconv.FormatFloat(value.(float64), 'f', 6, 64)
 			}
 			break
 		case string:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.perparevalues[index] =EncodeXSS( value.(string))
+				s.insertValues[index] =EncodeXSS( value.(string))
 			}
 			break
 		case []byte:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.perparevalues[index] =EncodeXSS(string(value.([]byte)))
+				s.insertValues[index] =EncodeXSS(string(value.([]byte)))
 			}
 			break
 		}
@@ -900,7 +901,7 @@ func (s *XSqlOrder) Where(values map[string]interface{}) {
 func (s *XSqlOrder) WherePerpare(values map[string]interface{}) {
 	s.reqBuffer.WriteString(" where ")
 	var index = 0
-	s.perparevalues = make([]interface{}, len(values))
+	s.whereValues = make([]interface{}, len(values))
 	for key, value := range values {
 
 		switch value.(type) {
@@ -908,42 +909,42 @@ func (s *XSqlOrder) WherePerpare(values map[string]interface{}) {
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.perparevalues[index] = strconv.FormatInt(int64(value.(int)), 10)
+				s.whereValues[index] = strconv.FormatInt(int64(value.(int)), 10)
 			}
 			break
 		case int64:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.perparevalues[index] = strconv.FormatInt(value.(int64), 10)
+				s.whereValues[index] = strconv.FormatInt(value.(int64), 10)
 			}
 			break
 		case float32:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.perparevalues[index] = strconv.FormatFloat(float64(value.(float32)), 'f', 0, 32)
+				s.whereValues[index] = strconv.FormatFloat(float64(value.(float32)), 'f', 0, 32)
 			}
 			break
 		case float64:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.perparevalues[index] = strconv.FormatFloat(value.(float64), 'f', 0, 64)
+				s.whereValues[index] = strconv.FormatFloat(value.(float64), 'f', 0, 64)
 			}
 			break
 		case string:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.perparevalues[index] =  EncodeXSS(value.(string))
+				s.whereValues[index] =  EncodeXSS(value.(string))
 			}
 			break
 		case []byte:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.perparevalues[index] =  EncodeXSS(string(value.([]byte)))
+				s.whereValues[index] =  EncodeXSS(string(value.([]byte)))
 			}
 			break
 		}
@@ -1232,12 +1233,21 @@ func (s *XSqlOrder) Execute() []map[string]interface{} { //SQL
 func (s *XSqlOrder) ExecuteNoResultPerpare() {
 	//SQL
 	fmt.Println("ExecuteNoResult执行sql语句: " + s.reqBuffer.String())
-	fmt.Println("ExecuteNoResult执行sql参数: ", s.perparevalues)
+	args := make([]interface{},0,len(s.insertValues)+len(s.whereValues))
+	args = append(args,s.insertValues...)
+	args = append(args,s.whereValues...)
+	fmt.Println("ExecuteNoResult执行sql参数: ", args)
 	s.ch = 0
 	s.xs.mLock.RLock()
 	go timer(s)
-	stmt, _ := s.xs.db.Prepare(s.reqBuffer.String())
-	rows, _ := stmt.Query(s.perparevalues...)
+	//stmt, _ := s.xs.db.Prepare(s.reqBuffer.String())
+	//
+	//rows, _ := stmt.Query(args...)
+
+	rows,_ := s.xs.db.Query(s.reqBuffer.String(),args...)
+	s.insertValues = nil
+	s.whereValues = nil
+
 	s.xs.mLock.RUnlock()
 	s.ch = 1
 	rows.Close()
@@ -1245,15 +1255,20 @@ func (s *XSqlOrder) ExecuteNoResultPerpare() {
 func (s *XSqlOrder) ExecuteForLastInsertIdPerpare() int64 {
 	//SQL
 	fmt.Println("ExecuteForLastInsertId执行sql语句: " + s.reqBuffer.String())
-	fmt.Println("ExecuteForLastInsertId执行sql参数: ", s.perparevalues)
+	args := make([]interface{},0,len(s.insertValues)+len(s.whereValues))
+	args = append(args,s.insertValues...)
+	args = append(args,s.whereValues...)
+	fmt.Println("ExecuteForLastInsertId执行sql参数: ",args)
 	s.ch = 0
 	s.xs.mLock.RLock()
 	go timer(s)
-	stmt, err := s.xs.db.Prepare(s.reqBuffer.String())
-	if err != nil {
-		fmt.Println("err:", err)
-	}
-	ret, err := stmt.Exec(s.perparevalues...)
+	//stmt, err := s.xs.db.Prepare(s.reqBuffer.String())
+	//if err != nil {
+	//	fmt.Println("err:", err)
+	//}
+	//ret, err := stmt.Exec(s.perparevalues...)
+
+	ret,err := s.xs.db.Exec(s.reqBuffer.String(),args...)
 	if err != nil {
 		fmt.Println("err:", err)
 	}
@@ -1264,6 +1279,9 @@ func (s *XSqlOrder) ExecuteForLastInsertIdPerpare() int64 {
 	//if RowsAffected, err := ret.RowsAffected(); nil == err {
 	//	fmt.Println("RowsAffected:", RowsAffected)
 	//}
+	s.insertValues = nil
+	s.whereValues = nil
+
 	s.xs.mLock.RUnlock()
 	s.ch = 1
 	//defer ret.Close()
@@ -1271,16 +1289,22 @@ func (s *XSqlOrder) ExecuteForLastInsertIdPerpare() int64 {
 }
 func (s *XSqlOrder) ExecutePerpare() []map[string]interface{} { //SQL
 	fmt.Println("Execute执行sql语句: " + s.reqBuffer.String())
-	fmt.Println("Execute执行sql参数: ", s.perparevalues)
+	args := make([]interface{},0,len(s.insertValues)+len(s.whereValues))
+	//args := s.insertValues
+	args = append(args,s.insertValues...)
+	args = append(args,s.whereValues...)
+	//args = append(args[len(s.insertValues):],s.whereValues)
+	fmt.Println("Execute执行sql参数: ", args)
 
 	s.ch = 0
 	s.xs.mLock.RLock()
 
 	go timer(s)
 
-	stmt, err := s.xs.db.Prepare(s.reqBuffer.String())
-	checkErr(err)
-	rows, err := stmt.Query(s.perparevalues...)
+	//stmt, err := s.xs.db.Prepare(s.reqBuffer.String())
+	//checkErr(err)
+	//rows, err := stmt.Query(s.perparevalues...)
+	rows, err := s.xs.db.Query(s.reqBuffer.String(),args...)
 
 	s.xs.mLock.RUnlock()
 	s.ch = 1
@@ -1292,13 +1316,21 @@ func (s *XSqlOrder) ExecutePerpare() []map[string]interface{} { //SQL
 		s.xs.db = db
 		s.xs.time_last = time.Now().Unix()
 
-		stmt, err := s.xs.db.Prepare(s.reqBuffer.String())
-		rows, err := stmt.Query(s.perparevalues...)
+		//stmt, err := s.xs.db.Prepare(s.reqBuffer.String())
+		//rows, err := stmt.Query(args...)
+		rows,err := s.xs.db.Query(s.reqBuffer.String(),args...)
 
 		defer rows.Close()
+
+		s.insertValues = nil
+		s.whereValues = nil
+
 		checkErr(err)
 		return nil
 	}
+
+	s.insertValues = nil
+	s.whereValues = nil
 
 	defer rows.Close()
 	columns, err2 := rows.Columns()

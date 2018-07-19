@@ -11,3 +11,7 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 test/mysqltest.go
+test/grpcAndProtoc/server.go
+test/grpcAndProtoc/client.go
+test/grpcAndProtoc/test.pb.go
+test/grpcAndProtoc/test.proto
