@@ -196,8 +196,8 @@ func (s *XSqlOrder) SetTableName(name ...string) map[string]string {
 func (s *XSqlOrder) SetTableColType(data_type map[string]string) {
 	//int  float string
 	//SQL
-	for key, value := range data_type {
-		s.colType[strings.ToLower(key)] = strings.ToLower(value)
+	for key, _ := range data_type {
+		s.colType[strings.ToLower(key)] = strings.ToLower(data_type[key])
 	}
 }
 func (s *XSqlOrder) SetTableColTypeString(data_types ...string) {
@@ -257,7 +257,7 @@ func (s *XSqlOrder) Insert(values map[string]interface{}, name string) {
 	valueString.Grow(2048)
 	//sorted_keys := make([]string, 0)
 	var index = 0
-	for key, value := range values {
+	for key, _ := range values {
 		index++
 		s.reqBuffer.WriteString(key)
 		if index != len(values) {
@@ -265,11 +265,11 @@ func (s *XSqlOrder) Insert(values map[string]interface{}, name string) {
 		}
 		//valueString += value + ","
 		//value := values[k]
-		switch value.(type) {
+		switch values[key].(type) {
 		case int:
 			{
 
-				valueString.WriteString(strconv.FormatInt(int64(value.(int)), 10))
+				valueString.WriteString(strconv.FormatInt(int64(values[key].(int)), 10))
 				if index != len(values) {
 					valueString.WriteString(",")
 				}
@@ -278,7 +278,7 @@ func (s *XSqlOrder) Insert(values map[string]interface{}, name string) {
 		case int64:
 			{
 
-				valueString.WriteString(strconv.FormatInt(value.(int64), 10))
+				valueString.WriteString(strconv.FormatInt(values[key].(int64), 10))
 				if index != len(values) {
 					valueString.WriteString(",")
 				}
@@ -287,7 +287,7 @@ func (s *XSqlOrder) Insert(values map[string]interface{}, name string) {
 		case float32:
 			{
 
-				valueString.WriteString(strconv.FormatFloat(float64(value.(float32)), 'f', 6, 32))
+				valueString.WriteString(strconv.FormatFloat(float64(values[key].(float32)), 'f', 6, 32))
 				if index != len(values) {
 					valueString.WriteString(",")
 				}
@@ -296,7 +296,7 @@ func (s *XSqlOrder) Insert(values map[string]interface{}, name string) {
 		case float64:
 			{
 
-				valueString.WriteString(strconv.FormatFloat(value.(float64), 'f', 6, 64))
+				valueString.WriteString(strconv.FormatFloat(values[key].(float64), 'f', 6, 64))
 				if index != len(values) {
 					valueString.WriteString(",")
 				}
@@ -306,7 +306,7 @@ func (s *XSqlOrder) Insert(values map[string]interface{}, name string) {
 			{
 
 				valueString.WriteString("\"")
-				valueString.WriteString(EncodeSQL(value.(string)))
+				valueString.WriteString(EncodeSQL(values[key].(string)))
 				valueString.WriteString("\"")
 				if index != len(values) {
 					valueString.WriteString(",")
@@ -318,7 +318,7 @@ func (s *XSqlOrder) Insert(values map[string]interface{}, name string) {
 			{
 
 				valueString.WriteString("\"")
-				valueString.WriteString(EncodeSQL(string(value.([]byte))))
+				valueString.WriteString(EncodeSQL(string(values[key].([]byte))))
 				valueString.WriteString("\"")
 				if index != len(values) {
 					valueString.WriteString(",")
@@ -345,7 +345,7 @@ func (s *XSqlOrder) Insert_(values map[string]interface{}, name string) {
 	var valueString bytes.Buffer
 	//sorted_keys := make([]string, 0)
 	var index = 0
-	for key, value := range values {
+	for key, _ := range values {
 		index++
 		s.reqBuffer.WriteString(key)
 		if index != len(values) {
@@ -353,11 +353,11 @@ func (s *XSqlOrder) Insert_(values map[string]interface{}, name string) {
 		}
 		//valueString += value + ","
 		//value := values[k]
-		switch value.(type) {
+		switch values[key].(type) {
 		case int:
 			{
 
-				valueString.WriteString(strconv.FormatInt(int64(value.(int)), 10))
+				valueString.WriteString(strconv.FormatInt(int64(values[key].(int)), 10))
 				if index != len(values) {
 					valueString.WriteString(",")
 				}
@@ -366,7 +366,7 @@ func (s *XSqlOrder) Insert_(values map[string]interface{}, name string) {
 		case int64:
 			{
 
-				valueString.WriteString(strconv.FormatInt(value.(int64), 10))
+				valueString.WriteString(strconv.FormatInt(values[key].(int64), 10))
 				if index != len(values) {
 					valueString.WriteString(",")
 				}
@@ -375,7 +375,7 @@ func (s *XSqlOrder) Insert_(values map[string]interface{}, name string) {
 		case float32:
 			{
 
-				valueString.WriteString(strconv.FormatFloat(float64(value.(float32)), 'f', 6, 32))
+				valueString.WriteString(strconv.FormatFloat(float64(values[key].(float32)), 'f', 6, 32))
 				if index != len(values) {
 					valueString.WriteString(",")
 				}
@@ -384,7 +384,7 @@ func (s *XSqlOrder) Insert_(values map[string]interface{}, name string) {
 		case float64:
 			{
 
-				valueString.WriteString(strconv.FormatFloat(value.(float64), 'f', 6, 64))
+				valueString.WriteString(strconv.FormatFloat(values[key].(float64), 'f', 6, 64))
 				if index != len(values) {
 					valueString.WriteString(",")
 				}
@@ -394,7 +394,7 @@ func (s *XSqlOrder) Insert_(values map[string]interface{}, name string) {
 			{
 
 				valueString.WriteString("'")
-				valueString.WriteString(EncodeSQL(value.(string)))
+				valueString.WriteString(EncodeSQL(values[key].(string)))
 				valueString.WriteString("'")
 				if index != len(values) {
 					valueString.WriteString(",")
@@ -406,7 +406,7 @@ func (s *XSqlOrder) Insert_(values map[string]interface{}, name string) {
 			{
 
 				valueString.WriteString("\"")
-				valueString.WriteString(string(value.([]byte)))
+				valueString.WriteString(string(values[key].([]byte)))
 				valueString.WriteString("\"")
 				if index != len(values) {
 					valueString.WriteString(",")
@@ -446,18 +446,18 @@ func (s *XSqlOrder) MulitInsert(list []map[string]interface{}, name string) {
 		}
 	}
 
-	for index_k, values := range list {
+	for index_k, _ := range list {
 		index_k++
 		//var index = 0
-		for index, key_value := range key_list {
-			value := values[key_value]
+		for index, _ := range key_list {
+			value := list[index_k][key_list[index]]
 			index++
 			switch value.(type) {
 			case int:
 				{
 
 					valueString.WriteString(strconv.FormatInt(int64(value.(int)), 10))
-					if index != len(values) {
+					if index != len(list[index_k]) {
 						valueString.WriteString(",")
 					}
 				}
@@ -466,7 +466,7 @@ func (s *XSqlOrder) MulitInsert(list []map[string]interface{}, name string) {
 				{
 
 					valueString.WriteString(strconv.FormatInt(value.(int64), 10))
-					if index != len(values) {
+					if index != len(list[index_k]) {
 						valueString.WriteString(",")
 					}
 				}
@@ -475,7 +475,7 @@ func (s *XSqlOrder) MulitInsert(list []map[string]interface{}, name string) {
 				{
 
 					valueString.WriteString(strconv.FormatFloat(float64(value.(float32)), 'f', 6, 32))
-					if index != len(values) {
+					if index != len(list[index_k]) {
 						valueString.WriteString(",")
 					}
 				}
@@ -484,7 +484,7 @@ func (s *XSqlOrder) MulitInsert(list []map[string]interface{}, name string) {
 				{
 
 					valueString.WriteString(strconv.FormatFloat(value.(float64), 'f', 6, 64))
-					if index != len(values) {
+					if index != len(list[index_k]) {
 						valueString.WriteString(",")
 					}
 				}
@@ -495,7 +495,7 @@ func (s *XSqlOrder) MulitInsert(list []map[string]interface{}, name string) {
 					valueString.WriteString("\"")
 					valueString.WriteString(value.(string))
 					valueString.WriteString("\"")
-					if index != len(values) {
+					if index != len(list[index_k]) {
 						valueString.WriteString(",")
 					}
 				}
@@ -506,7 +506,7 @@ func (s *XSqlOrder) MulitInsert(list []map[string]interface{}, name string) {
 					valueString.WriteString("\"")
 					valueString.WriteString(string(value.([]byte)))
 					valueString.WriteString("\"")
-					if index != len(values) {
+					if index != len(list[index_k]) {
 						valueString.WriteString(",")
 					}
 				}
@@ -540,40 +540,40 @@ func (s *XSqlOrder) InsertPerpare(values map[string]interface{}, name string) {
 	//s.selectKeys = make(map[string]string)
 	//sorted_keys := make([]string, 0)
 	var index = 0
-	for key, value := range values {
+	for key, _ := range values {
 		s.reqBuffer.WriteString(key)
 		s.reqBuffer.WriteString("=?")
 		//valueString += value + ","
 		//value := values[k]
-		switch value.(type) {
+		switch values[key].(type) {
 		case int:
 			{
-				s.insertValues[index] = strconv.FormatInt(int64(value.(int)), 10)
+				s.insertValues[index] = strconv.FormatInt(int64(values[key].(int)), 10)
 			}
 			break
 		case int64:
 			{
-				s.insertValues[index] = strconv.FormatInt(value.(int64), 10)
+				s.insertValues[index] = strconv.FormatInt(values[key].(int64), 10)
 			}
 			break
 		case float32:
 			{
-				s.insertValues[index] = strconv.FormatFloat(float64(value.(float32)), 'f', 6, 32)
+				s.insertValues[index] = strconv.FormatFloat(float64(values[key].(float32)), 'f', 6, 32)
 			}
 			break
 		case float64:
 			{
-				s.insertValues[index] = strconv.FormatFloat(value.(float64), 'f', 6, 64)
+				s.insertValues[index] = strconv.FormatFloat(values[key].(float64), 'f', 6, 64)
 			}
 			break
 		case string:
 			{
-				s.insertValues[index] = EncodeXSS(value.(string))
+				s.insertValues[index] = EncodeXSS(values[key].(string))
 			}
 			break
 		case []byte:
 			{
-				s.insertValues[index] = EncodeXSS(string(value.([]byte)))
+				s.insertValues[index] = EncodeXSS(string(values[key].([]byte)))
 			}
 			break
 		}
@@ -597,14 +597,14 @@ func (s *XSqlOrder) Update(values map[string]interface{}, name string) {
 	s.reqBuffer.WriteString(" SET ")
 	//s.selectKeys = make(map[string]string)
 	var index = 0
-	for key, value := range values {
+	for key, _ := range values {
 		index++
-		switch value.(type) {
+		switch values[key].(type) {
 		case int:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
-				s.reqBuffer.WriteString(strconv.FormatInt(int64(value.(int)), 10))
+				s.reqBuffer.WriteString(strconv.FormatInt(int64(values[key].(int)), 10))
 				if index != len(values) {
 					s.reqBuffer.WriteString(", ")
 				}
@@ -614,7 +614,7 @@ func (s *XSqlOrder) Update(values map[string]interface{}, name string) {
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
-				s.reqBuffer.WriteString(strconv.FormatInt(value.(int64), 10))
+				s.reqBuffer.WriteString(strconv.FormatInt(values[key].(int64), 10))
 				if index != len(values) {
 					s.reqBuffer.WriteString(", ")
 				}
@@ -624,7 +624,7 @@ func (s *XSqlOrder) Update(values map[string]interface{}, name string) {
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
-				s.reqBuffer.WriteString(strconv.FormatFloat(float64(value.(float32)), 'f', 6, 32))
+				s.reqBuffer.WriteString(strconv.FormatFloat(float64(values[key].(float32)), 'f', 6, 32))
 				if index != len(values) {
 					s.reqBuffer.WriteString(", ")
 				}
@@ -634,7 +634,7 @@ func (s *XSqlOrder) Update(values map[string]interface{}, name string) {
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
-				s.reqBuffer.WriteString(strconv.FormatFloat(value.(float64), 'f', 6, 64))
+				s.reqBuffer.WriteString(strconv.FormatFloat(values[key].(float64), 'f', 6, 64))
 				if index != len(values) {
 					s.reqBuffer.WriteString(", ")
 				}
@@ -645,7 +645,7 @@ func (s *XSqlOrder) Update(values map[string]interface{}, name string) {
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
 				s.reqBuffer.WriteString("\"")
-				s.reqBuffer.WriteString(value.(string))
+				s.reqBuffer.WriteString(values[key].(string))
 				s.reqBuffer.WriteString("\"")
 				if index != len(values) {
 					s.reqBuffer.WriteString(",")
@@ -657,7 +657,7 @@ func (s *XSqlOrder) Update(values map[string]interface{}, name string) {
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
 				s.reqBuffer.WriteString("\"")
-				s.reqBuffer.WriteString(string(value.([]byte)))
+				s.reqBuffer.WriteString(string(values[key].([]byte)))
 				s.reqBuffer.WriteString("\"")
 				if index != len(values) {
 					s.reqBuffer.WriteString(",")
@@ -677,14 +677,14 @@ func (s *XSqlOrder) Update_(values map[string]interface{}, name string) {
 	s.reqBuffer.WriteString(" SET ")
 	//s.selectKeys = make(map[string]string)
 	var index = 0
-	for key, value := range values {
+	for key, _ := range values {
 		index++
-		switch value.(type) {
+		switch values[key].(type) {
 		case int:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
-				s.reqBuffer.WriteString(strconv.FormatInt(int64(value.(int)), 10))
+				s.reqBuffer.WriteString(strconv.FormatInt(int64(values[key].(int)), 10))
 				if index != len(values) {
 					s.reqBuffer.WriteString(", ")
 				}
@@ -694,7 +694,7 @@ func (s *XSqlOrder) Update_(values map[string]interface{}, name string) {
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
-				s.reqBuffer.WriteString(strconv.FormatInt(value.(int64), 10))
+				s.reqBuffer.WriteString(strconv.FormatInt(values[key].(int64), 10))
 				if index != len(values) {
 					s.reqBuffer.WriteString(", ")
 				}
@@ -704,7 +704,7 @@ func (s *XSqlOrder) Update_(values map[string]interface{}, name string) {
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
-				s.reqBuffer.WriteString(strconv.FormatFloat(float64(value.(float32)), 'f', 6, 32))
+				s.reqBuffer.WriteString(strconv.FormatFloat(float64(values[key].(float32)), 'f', 6, 32))
 				if index != len(values) {
 					s.reqBuffer.WriteString(", ")
 				}
@@ -714,7 +714,7 @@ func (s *XSqlOrder) Update_(values map[string]interface{}, name string) {
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
-				s.reqBuffer.WriteString(strconv.FormatFloat(value.(float64), 'f', 6, 64))
+				s.reqBuffer.WriteString(strconv.FormatFloat(values[key].(float64), 'f', 6, 64))
 				if index != len(values) {
 					s.reqBuffer.WriteString(", ")
 				}
@@ -725,7 +725,7 @@ func (s *XSqlOrder) Update_(values map[string]interface{}, name string) {
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
 				s.reqBuffer.WriteString("'")
-				s.reqBuffer.WriteString(value.(string))
+				s.reqBuffer.WriteString(values[key].(string))
 				s.reqBuffer.WriteString("'")
 				if index != len(values) {
 					s.reqBuffer.WriteString(",")
@@ -737,7 +737,7 @@ func (s *XSqlOrder) Update_(values map[string]interface{}, name string) {
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
 				s.reqBuffer.WriteString("\"")
-				s.reqBuffer.WriteString(string(value.([]byte)) + "\"")
+				s.reqBuffer.WriteString(string(values[key].([]byte)) + "\"")
 				if index != len(values) {
 					s.reqBuffer.WriteString(",")
 				}
@@ -757,49 +757,49 @@ func (s *XSqlOrder) UpdatePerpare(values map[string]interface{}, name string) {
 	//s.selectKeys = make(map[string]string)
 	s.insertValues = make([]interface{},len(values))
 	var index = 0
-	for key, value := range values {
+	for key, _ := range values {
 
-		switch value.(type) {
+		switch values[key].(type) {
 		case int:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.insertValues[index] = strconv.FormatInt(int64(value.(int)), 10)
+				s.insertValues[index] = strconv.FormatInt(int64(values[key].(int)), 10)
 			}
 			break
 		case int64:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.insertValues[index] = strconv.FormatInt(value.(int64), 10)
+				s.insertValues[index] = strconv.FormatInt(values[key].(int64), 10)
 			}
 			break
 		case float32:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.insertValues[index] = strconv.FormatFloat(float64(value.(float32)), 'f', 6, 32)
+				s.insertValues[index] = strconv.FormatFloat(float64(values[key].(float32)), 'f', 6, 32)
 			}
 			break
 		case float64:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.insertValues[index] = strconv.FormatFloat(value.(float64), 'f', 6, 64)
+				s.insertValues[index] = strconv.FormatFloat(values[key].(float64), 'f', 6, 64)
 			}
 			break
 		case string:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.insertValues[index] =EncodeXSS( value.(string))
+				s.insertValues[index] =EncodeXSS( values[key].(string))
 			}
 			break
 		case []byte:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.insertValues[index] =EncodeXSS(string(value.([]byte)))
+				s.insertValues[index] =EncodeXSS(string(values[key].([]byte)))
 			}
 			break
 		}
@@ -841,14 +841,14 @@ func (s *XSqlOrder) AddSuf(suffixes string) {
 func (s *XSqlOrder) Where(values map[string]interface{}) {
 	s.reqBuffer.WriteString(" where ")
 	var index = 0
-	for key, value := range values {
+	for key, _ := range values {
 		index++
-		switch value.(type) {
+		switch values[key].(type) {
 		case int:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
-				s.reqBuffer.WriteString(strconv.FormatInt(int64(value.(int)), 10))
+				s.reqBuffer.WriteString(strconv.FormatInt(int64(values[key].(int)), 10))
 			}
 			break
 		case int64:
@@ -856,21 +856,21 @@ func (s *XSqlOrder) Where(values map[string]interface{}) {
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
 
-				s.reqBuffer.WriteString(strconv.FormatInt(value.(int64), 10))
+				s.reqBuffer.WriteString(strconv.FormatInt(values[key].(int64), 10))
 			}
 			break
 		case float32:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
-				s.reqBuffer.WriteString(strconv.FormatFloat(float64(value.(float32)), 'f', 0, 32))
+				s.reqBuffer.WriteString(strconv.FormatFloat(float64(values[key].(float32)), 'f', 0, 32))
 			}
 			break
 		case float64:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
-				s.reqBuffer.WriteString(strconv.FormatFloat(value.(float64), 'f', 0, 64))
+				s.reqBuffer.WriteString(strconv.FormatFloat(values[key].(float64), 'f', 0, 64))
 			}
 			break
 		case string:
@@ -878,7 +878,7 @@ func (s *XSqlOrder) Where(values map[string]interface{}) {
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
 				s.reqBuffer.WriteString("\"")
-				s.reqBuffer.WriteString(EncodeSQL(value.(string)))
+				s.reqBuffer.WriteString(EncodeSQL(values[key].(string)))
 				s.reqBuffer.WriteString("\"")
 			}
 			break
@@ -887,7 +887,7 @@ func (s *XSqlOrder) Where(values map[string]interface{}) {
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=")
 				s.reqBuffer.WriteString("\"")
-				s.reqBuffer.WriteString(EncodeSQL(string(value.([]byte))))
+				s.reqBuffer.WriteString(EncodeSQL(string(values[key].([]byte))))
 				s.reqBuffer.WriteString("\"")
 			}
 			break
@@ -902,49 +902,49 @@ func (s *XSqlOrder) WherePerpare(values map[string]interface{}) {
 	s.reqBuffer.WriteString(" where ")
 	var index = 0
 	s.whereValues = make([]interface{}, len(values))
-	for key, value := range values {
+	for key, _ := range values {
 
-		switch value.(type) {
+		switch values[key].(type) {
 		case int:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.whereValues[index] = strconv.FormatInt(int64(value.(int)), 10)
+				s.whereValues[index] = strconv.FormatInt(int64(values[key].(int)), 10)
 			}
 			break
 		case int64:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.whereValues[index] = strconv.FormatInt(value.(int64), 10)
+				s.whereValues[index] = strconv.FormatInt(values[key].(int64), 10)
 			}
 			break
 		case float32:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.whereValues[index] = strconv.FormatFloat(float64(value.(float32)), 'f', 0, 32)
+				s.whereValues[index] = strconv.FormatFloat(float64(values[key].(float32)), 'f', 0, 32)
 			}
 			break
 		case float64:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.whereValues[index] = strconv.FormatFloat(value.(float64), 'f', 0, 64)
+				s.whereValues[index] = strconv.FormatFloat(values[key].(float64), 'f', 0, 64)
 			}
 			break
 		case string:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.whereValues[index] =  EncodeXSS(value.(string))
+				s.whereValues[index] =  EncodeXSS(values[key].(string))
 			}
 			break
 		case []byte:
 			{
 				s.reqBuffer.WriteString(key)
 				s.reqBuffer.WriteString("=?")
-				s.whereValues[index] =  EncodeXSS(string(value.([]byte)))
+				s.whereValues[index] =  EncodeXSS(string(values[key].([]byte)))
 			}
 			break
 		}
@@ -1073,7 +1073,7 @@ func (s *XSqlOrder) Execute2() []map[string]interface{} { //SQL
 	// See http://code.google.com/p/go-wiki/wiki/InterfaceSlice for details
 	scanArgs := make([]interface{}, len(values))
 
-	for i := range values {
+	for i := 0;i<len(values);i++ {
 		scanArgs[i] = &values[i]
 
 	}
@@ -1087,30 +1087,30 @@ func (s *XSqlOrder) Execute2() []map[string]interface{} { //SQL
 		}
 		t := make(map[string]interface{})
 		//fmt.Println(len(selectKeys))
-		for i, col := range values {
+		for i, _ := range values {
 			//	fmt.Println(i)
 			//fmt.Println(col)
 			//fmt.Println(selectKeys[columns[i]])
-			if col == nil {
+			if values[i] == nil {
 				t[columns[i]] = nil
 			} else {
 				switch s.colType[strings.ToLower(columns[i])] {
 				case "int":
 					{
 
-						t[columns[i]] = byte2Int(col.([]byte))
+						t[columns[i]] = byte2Int(values[i].([]byte))
 					}
 					break
 				case "float":
 					{
 						fmt.Println(columns[i])
-						t[columns[i]] = byte2Float(col.([]byte))
+						t[columns[i]] = byte2Float(values[i].([]byte))
 					}
 					break
 				case "string":
 					{
 
-						t[columns[i]] = byte2StringDE(col.([]byte))
+						t[columns[i]] = byte2StringDE(values[i].([]byte))
 					}
 					break
 				default:
@@ -1174,7 +1174,7 @@ func (s *XSqlOrder) Execute() []map[string]interface{} { //SQL
 	// See http://code.google.com/p/go-wiki/wiki/InterfaceSlice for details
 	scanArgs := make([]interface{}, len(values))
 
-	for i := range values {
+	for i :=0;i<len(values);i++  {
 		scanArgs[i] = &values[i]
 
 		//fmt.Println(columns[i])
@@ -1190,33 +1190,33 @@ func (s *XSqlOrder) Execute() []map[string]interface{} { //SQL
 			//panic(err.Error()) // proper error handling instead of panic in your app
 		}
 		t := make(map[string]interface{})
-		for i, col := range values {
+		for i, _ := range values {
 
-			if col == nil {
+			if values[i] == nil {
 				t[columns[i]] = nil
 			} else {
 				switch s.colType[strings.ToLower(columns[i])] {
 				case "int":
 					{
 
-						t[columns[i]] = byte2Int(col.([]byte))
+						t[columns[i]] = byte2Int(values[i].([]byte))
 					}
 					break
 				case "float":
 					{
 						//fmt.Println(columns[i])
-						t[columns[i]] = byte2Float(col.([]byte))
+						t[columns[i]] = byte2Float(values[i].([]byte))
 					}
 					break
 				case "string":
 					{
 
-						t[columns[i]] = byte2StringDE(col.([]byte))
+						t[columns[i]] = byte2StringDE(values[i].([]byte))
 					}
 					break
 				default:
 					{
-						t[columns[i]] = getInitValue(col.([]byte))
+						t[columns[i]] = getInitValue(values[i].([]byte))
 					}
 					break
 				}
@@ -1350,7 +1350,7 @@ func (s *XSqlOrder) ExecutePerpare() []map[string]interface{} { //SQL
 	// See http://code.google.com/p/go-wiki/wiki/InterfaceSlice for details
 	scanArgs := make([]interface{}, len(values))
 
-	for i := range values {
+	for i := 0;i<len(values);i++ {
 		scanArgs[i] = &values[i]
 
 		//fmt.Println(columns[i])
@@ -1366,33 +1366,33 @@ func (s *XSqlOrder) ExecutePerpare() []map[string]interface{} { //SQL
 			//panic(err.Error()) // proper error handling instead of panic in your app
 		}
 		t := make(map[string]interface{})
-		for i, col := range values {
+		for i, _ := range values {
 
-			if col == nil {
+			if values[i] == nil {
 				t[columns[i]] = nil
 			} else {
 				switch s.colType[strings.ToLower(columns[i])] {
 				case "int":
 					{
 						//t[columns[i]] = byte2Int(col.([]byte))
-						t[columns[i]] = col
+						t[columns[i]] = values[i]
 					}
 					break
 				case "float":
 					{
 						//fmt.Println(columns[i])
-						t[columns[i]] = col
+						t[columns[i]] = values[i]
 					}
 					break
 				case "string":
 					{
 
-						t[columns[i]] = byte2String(col.([]byte))
+						t[columns[i]] = byte2String(values[i].([]byte))
 					}
 					break
 				default:
 					{
-						t[columns[i]] = getInitValue(col.([]byte))
+						t[columns[i]] = getInitValue(values[i].([]byte))
 					}
 					break
 				}
