@@ -1,0 +1,27 @@
+
+/***********************------------------------------------------------------------------------------------------------------------------------
+2018-11-29 20:14:09[
+2018-11-29 20:14:09 
+error: Error 1045: Access denied for user 'root'@'localhost' (using password: YES)
+ goroutine 1 [running]:
+runtime/debug.Stack(0xc04205bba0, 0x1, 0x1)
+	D:/Go64/src/runtime/debug/stack.go:24 +0xae
+nqc.cn/log.InitListner(0x0, 0x0)
+	D:/work/src/nqc.cn/log/log.go:139 +0x242
+panic(0x7fbec0, 0xc0421b0400)
+	D:/Go64/src/runtime/panic.go:491 +0x291
+nqc.cn/log.Write(0xa74080, 0xc0421b0400)
+	D:/work/src/nqc.cn/log/log.go:145 +0x85
+nqc.cn/xsql.checkErr(0xa74080, 0xc0421b0400)
+	D:/work/src/nqc.cn/xsql/xsql.go:853 +0x4b
+nqc.cn/xsql.(*XSqlOrder).Execute(0xc04203aba0, 0x0, 0x0, 0x0)
+	D:/work/src/nqc.cn/xsql/xsql.go:1215 +0x484
+main.main()
+	D:/work/src/newknowlage/main.go:213 +0x197
+
+] 
+------------------------------------------------------------------------------------------------------------------------***********************/
+数据库执行错误： runtime error: invalid memory address or nil pointer dereference
+[]
+{"ReqCode":"05","ReqMsg":"提交参数异常，缺少短信内容信息","ReqId":"181129201407104010100002"}
+false

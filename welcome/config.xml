@@ -1,0 +1,46 @@
+<?xml version ="1.0" encoding="utf-8"?>
+<config ver="1.0.2.1">
+    <color echo="日志参数配置">
+        <title echo="标题和结尾的RGBA颜色">
+            <r echo="R">251</r>
+            <g echo="G">2</g>
+            <b echo="B">255</b>
+            <a echo="A">255</a>
+        </title>
+        <content echo="正文的RGBA颜色">
+            <r echo="R">255</r>
+            <g echo="G">215</g>
+            <b echo="B">80</b>
+            <a echo="B">255</a>
+        </content>
+        <back echo="背景的RGBA颜色">
+            <r echo="R">27</r>
+            <g echo="G">91</g>
+            <b echo="B">97</b>
+            <a echo="B">255</a>
+        </back>
+    </color>
+    <info echo="需要编辑的内容">
+        <desc echo="每行的内容">
+            <content  echo="内容">热烈欢迎</content>
+            <size echo="字体大小">300</size>
+            <kerning echo="字距">50</kerning>
+            <line echo="与上一行的行距">0</line>
+            <back_size echo="背景的宽度">15</back_size>
+        </desc>
+        <desc echo="每行的内容">
+            <content  echo="内容">哈哈哈哈哈哈哈哈哈</content>
+            <size echo="字体大小">300</size>
+            <kerning echo="字距">20</kerning>
+            <line echo="与上一行的行距">50</line>
+            <back_size echo="背景的宽度">15</back_size>
+        </desc>
+        <desc echo="每行的内容">
+            <content  echo="内容">莅临隧唐基建通指导</content>
+            <size echo="字体大小">300</size>
+            <kerning echo="字距">20</kerning>
+            <line echo="与上一行的行距">50</line>
+            <back_size echo="背景的宽度">15</back_size>
+        </desc>
+    </info>
+</config>

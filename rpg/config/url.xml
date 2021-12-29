@@ -1,0 +1,31 @@
+<?xml version ="1.0" encoding="utf-8"?>
+<url_config ver="1.0.2.1">
+        <url_ext>
+            <name echo="名称">总部OA</name>
+            <url echo="链接">https://work.cninct.com/STOA_V3/tar_index.html#/login</url>
+        </url_ext>
+    <url_ext>
+        <name echo="名称">项目管家正式</name>
+        <url echo="链接">https://build.cninct.com/PMAI/web/</url>
+    </url_ext>
+    <url_ext>
+        <name echo="名称">项目管家测试</name>
+        <url echo="链接">https://dev.cninct.com/PMAI_DEV/web/</url>
+    </url_ext>
+    <url_ext>
+        <name echo="名称">项目管家-接口文档</name>
+        <url echo="链接">https://work.cninct.com/STOA_V3/tar_index.html#/login</url>
+    </url_ext>
+    <url_ext>
+        <name echo="名称">数据中台-接口文档</name>
+        <url echo="链接">https://dev.cninct.com/STPM_DEV/develop/develop.html</url>
+    </url_ext>
+    <url_ext>
+        <name echo="名称">总部OA</name>
+        <url echo="链接">https://work.cninct.com/STOA_V3/tar_index.html#/login</url>
+    </url_ext>
+    <url_ext>
+        <name echo="名称">总部OA</name>
+        <url echo="链接">https://work.cninct.com/STOA_V3/tar_index.html#/login</url>
+    </url_ext>
+</url_config>

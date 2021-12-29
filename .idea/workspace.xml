@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="54c29617-d0a3-4420-83ab-252e8677007a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2048/2048-go.go" beforeDir="false" afterPath="$PROJECT_DIR$/2048/2048-go.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2048/prin.go" beforeDir="false" afterPath="$PROJECT_DIR$/2048/prin.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mypprof/mypprof.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatServer/chatserver.go" beforeDir="false" afterPath="$PROJECT_DIR$/chatServer/chatserver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/download/DL.go" beforeDir="false" afterPath="$PROJECT_DIR$/download/DL.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/log.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy/httpproxy.go" beforeDir="false" afterPath="$PROJECT_DIR$/proxy/httpproxy.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy/proxyserver.go" beforeDir="false" afterPath="$PROJECT_DIR$/proxy/proxyserver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snake/snakke.go" beforeDir="false" afterPath="$PROJECT_DIR$/snake/snakke.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sort/sort.go" beforeDir="false" afterPath="$PROJECT_DIR$/sort/sort.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Map.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/Map.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/redis.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/redis.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translate/tran.go" beforeDir="false" afterPath="$PROJECT_DIR$/translate/tran.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsql/Mysql.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xsql/XssAndSQL.go" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1317358148">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.0" value="8" />
+          <entry key="project.open.time.1" value="6" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="17" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="go" value="6925" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Go" value="6925" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="go" value="71" />
+          <entry key="json" value="1" />
+          <entry key="mainfest" value="1" />
+          <entry key="prof" value="6" />
+          <entry key="s" value="1" />
+          <entry key="txt" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Go" value="71" />
+          <entry key="JSON" value="1" />
+          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="x86 Plan9 Assembly" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="newknowlage" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xsql2/XsqlTool.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1377">
+              <caret line="93" selection-start-line="93" selection-end-line="93" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xsql2/execute.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/excel/import.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1037">
+              <caret line="65" column="55" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gui/gui.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/proxy/httpproxy.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="62" column="42" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gui/main.manifest">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/excel/excel_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pprof/cpu.prof">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pprof/heap.prof">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/boom/run.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>fmt.p</find>
+      <find>tk</find>
+      <find />
+      <find>perparevalues</find>
+      <find>range</find>
+      <find>order.values</find>
+      <find>col</find>
+      <find>order.</find>
+      <find>orde</find>
+      <find>order</find>
+      <find>order.x</find>
+      <find>order.x.</find>
+      <find>AS</find>
+      <find>free</find>
+      <find>\\</find>
+      <find>other_</find>
+      <find>this.fd</find>
+      <find>this.depth--</find>
+      <find>mylog.depth</find>
+      <find>SDK</find>
+      <find>其中：商品维修费</find>
+      <find>p</find>
+      <find>point</find>
+      <find>create_room_list</find>
+      <find>termbox.ColorBlack</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>order.</replace>
+      <replace>order</replace>
+      <replace>\</replace>
+      <replace>depth</replace>
+      <replace>log</replace>
+      <replace>t</replace>
+      <replace>bg</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>E:\work\src\newknowlage</dir>
+      <dir>D:\work\src\SmartSite</dir>
+    </dirStrings>
+  </component>
+  <component name="GOROOT" path="D:/GO/1.12/GO64" />
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="urls">
+      <list>
+        <option value="file://$PROJECT_DIR$/../.." />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/SDK/Mysql.go" />
+        <option value="$PROJECT_DIR$/SDK/log/log.go" />
+        <option value="$PROJECT_DIR$/SDK/mypprof/mypprof.go" />
+        <option value="$PROJECT_DIR$/download/DL.go" />
+        <option value="$PROJECT_DIR$/log/2018_10_23_10_50_08.txt" />
+        <option value="$PROJECT_DIR$/../github.com/CYL96/MySDK/log/log.go" />
+        <option value="$PROJECT_DIR$/test/T+plus.go" />
+        <option value="$PROJECT_DIR$/../ProjectManage/v2/finance/profitInfo.go" />
+        <option value="$PROJECT_DIR$/../ProjectManage/v2/finance/tableBuild.go" />
+        <option value="$PROJECT_DIR$/../nqc.cn/xsql/xsql.go" />
+        <option value="$PROJECT_DIR$/../ProjectManage/config/GetUserCompany.go" />
+        <option value="$PROJECT_DIR$/../ProjectManage/config/parsePostForm.go" />
+        <option value="$PROJECT_DIR$/snake/snakke.go" />
+        <option value="$PROJECT_DIR$/translate/Test.go" />
+        <option value="$PROJECT_DIR$/translate/test.go" />
+        <option value="$PROJECT_DIR$/translate/testTranslateOnline.go" />
+        <option value="$PROJECT_DIR$/translate/qt_test.go" />
+        <option value="$PROJECT_DIR$/abc.go" />
+        <option value="$PROJECT_DIR$/test/kcptest/kcp_test.go" />
+        <option value="$PROJECT_DIR$/test/kcptest/kcp_client_test.go" />
+        <option value="$PROJECT_DIR$/test/walk_gui/gui_tet.go" />
+        <option value="$PROJECT_DIR$/../github.com/lxn/walk/numberlabel.go" />
+        <option value="$PROJECT_DIR$/test/walk_gui/tttt.go" />
+        <option value="$PROJECT_DIR$/translate/tran.go" />
+        <option value="$PROJECT_DIR$/translate/tanslateonline_test.go" />
+        <option value="$PROJECT_DIR$/translate/main.go" />
+        <option value="$PROJECT_DIR$/translate/tranOnline.go" />
+        <option value="$PROJECT_DIR$/test/walk_gui/gui_test.go" />
+        <option value="$PROJECT_DIR$/translate/gui.go" />
+        <option value="$PROJECT_DIR$/test/RGB/rgb.go" />
+        <option value="$PROJECT_DIR$/test/RGB/rgb_test.go" />
+        <option value="$PROJECT_DIR$/finance/xxx_test.go" />
+        <option value="$PROJECT_DIR$/finance/main.go" />
+        <option value="$PROJECT_DIR$/test/hotel/Hotel.go" />
+        <option value="$PROJECT_DIR$/HTTP/GetIPAdress/Adress.go" />
+        <option value="$PROJECT_DIR$/HTTP/GetIPAdress/define.go" />
+        <option value="$PROJECT_DIR$/HTTP/GetIPAddress/define.go" />
+        <option value="$PROJECT_DIR$/HTTP/GetIPAddress/Address_test.go" />
+        <option value="$PROJECT_DIR$/HTTP/GetIPAddress/Address.go" />
+        <option value="$PROJECT_DIR$/boom/Mine_test.go" />
+        <option value="$PROJECT_DIR$/2048/prin.go" />
+        <option value="$PROJECT_DIR$/boom/config.go" />
+        <option value="$PROJECT_DIR$/boom/set.go" />
+        <option value="$PROJECT_DIR$/boom/printf.go" />
+        <option value="$PROJECT_DIR$/../github.com/CYL96/MySDK/mypprof/mypprof.go" />
+        <option value="$PROJECT_DIR$/boom/run.go" />
+        <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/excel/excel_test.go" />
+        <option value="$PROJECT_DIR$/excel/import.go" />
+        <option value="$PROJECT_DIR$/gui/main.mainfest" />
+        <option value="$PROJECT_DIR$/gui/gui.go" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="19" />
+    <option name="y" value="68" />
+    <option name="width" value="1729" />
+    <option name="height" value="1005" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="newknowlage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newknowlage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newknowlage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newknowlage" type="462c0819:PsiDirectoryNode" />
+              <item name="proxy" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="newknowlage" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564624564792" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../KXYY" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\src\newknowlage\excel" />
+      <recent name="D:\work\src\newknowlage\test\hotel" />
+      <recent name="D:\work\src\newknowlage\finance" />
+      <recent name="D:\work\src\newknowlage" />
+      <recent name="D:\work\src\newknowlage\SDK" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\src\newknowlage\SDK\Mypprof" />
+      <recent name="D:\work\src\newknowlage\SDK\util" />
+      <recent name="D:\work\src\newknowlage\SDK\log" />
+      <recent name="D:\work\src\newknowlage\SDK" />
+      <recent name="E:\work\src\newknowlage\test\grpcAndProtoc" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Go Build.go build gui.go">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="go build gui.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="newknowlage" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/gui/gui.go" />
+      <package value="newknowlage" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="newknowlage" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="newknowlage" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestGetAddressByIP in newknowlage/HTTP/GetIPAddress" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="newknowlage" />
+      <working_directory value="$PROJECT_DIR$/HTTP/GetIPAddress" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="newknowlage/HTTP/GetIPAddress" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^TestGetAddressByIP$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestPrintfMine in newknowlage/boom" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="newknowlage" />
+      <working_directory value="$PROJECT_DIR$/boom" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="newknowlage/boom" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^TestPrintfMine$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestReadExcel in newknowlage/excel" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="newknowlage" />
+      <working_directory value="$PROJECT_DIR$/excel" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="newknowlage/excel" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^TestReadExcel$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.go build main.go" />
+      <item itemvalue="Go Test.TestGetAddressByIP in newknowlage/HTTP/GetIPAddress" />
+      <item itemvalue="Go Test.TestPrintfMine in newknowlage/boom" />
+      <item itemvalue="Go Test.TestReadExcel in newknowlage/excel" />
+      <item itemvalue="Go Build.go build gui.go" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build gui.go" />
+        <item itemvalue="Go Test.TestReadExcel in newknowlage/excel" />
+        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Test.TestPrintfMine in newknowlage/boom" />
+        <item itemvalue="Go Test.TestGetAddressByIP in newknowlage/HTTP/GetIPAddress" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_MODE" value="false" />
+    <option name="ACTIVE_ACTIONS" value=",Show Private Members" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54c29617-d0a3-4420-83ab-252e8677007a" name="Default" comment="" />
+      <created>1526550165193</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1526550165193</updated>
+      <workItem from="1526550167621" duration="4398000" />
+      <workItem from="1526978576222" duration="7385000" />
+      <workItem from="1527143912003" duration="24656000" />
+      <workItem from="1527469864650" duration="7178000" />
+      <workItem from="1527487375992" duration="15340000" />
+      <workItem from="1527667985639" duration="6765000" />
+      <workItem from="1527682036595" duration="7759000" />
+      <workItem from="1527824623202" duration="11614000" />
+      <workItem from="1528683948898" duration="13584000" />
+      <workItem from="1528769459952" duration="26983000" />
+      <workItem from="1528938259417" duration="1966000" />
+      <workItem from="1529028370107" duration="24681000" />
+      <workItem from="1529371123633" duration="23967000" />
+      <workItem from="1529462506151" duration="5413000" />
+      <workItem from="1529544324031" duration="14558000" />
+      <workItem from="1529629558160" duration="6806000" />
+      <workItem from="1529658012538" duration="171000" />
+      <workItem from="1529658254266" duration="63000" />
+      <workItem from="1529912491020" duration="3380000" />
+      <workItem from="1529975433192" duration="1566000" />
+      <workItem from="1529977115300" duration="21345000" />
+      <workItem from="1530171132879" duration="62000" />
+      <workItem from="1530241421653" duration="901000" />
+      <workItem from="1530498543289" duration="873000" />
+      <workItem from="1530525160968" duration="2160000" />
+      <workItem from="1530579614122" duration="10367000" />
+      <workItem from="1530598450155" duration="265000" />
+      <workItem from="1530599187720" duration="2569000" />
+      <workItem from="1530776232942" duration="6850000" />
+      <workItem from="1530866608942" duration="1559000" />
+      <workItem from="1531102068001" duration="11009000" />
+      <workItem from="1531120353669" duration="2308000" />
+      <workItem from="1531359820224" duration="15206000" />
+      <workItem from="1531444533117" duration="3522000" />
+      <workItem from="1531704150261" duration="21154000" />
+      <workItem from="1531791292405" duration="5695000" />
+      <workItem from="1531807552405" duration="1353000" />
+      <workItem from="1531812037872" duration="9389000" />
+      <workItem from="1531878215746" duration="17493000" />
+      <workItem from="1531964476662" duration="7539000" />
+      <workItem from="1532050228184" duration="5624000" />
+      <workItem from="1532071327554" duration="5806000" />
+      <workItem from="1532327705363" duration="1673000" />
+      <workItem from="1532415803498" duration="5371000" />
+      <workItem from="1532498315373" duration="2156000" />
+      <workItem from="1532509272471" duration="653000" />
+      <workItem from="1532598126871" duration="1669000" />
+      <workItem from="1532656036524" duration="743000" />
+      <workItem from="1532921118873" duration="14008000" />
+      <workItem from="1532943251983" duration="10200000" />
+      <workItem from="1533017632142" duration="14837000" />
+      <workItem from="1533085308815" duration="9573000" />
+      <workItem from="1533103395077" duration="9539000" />
+      <workItem from="1533174907242" duration="1230000" />
+      <workItem from="1533277324841" duration="2495000" />
+      <workItem from="1533522162960" duration="8745000" />
+      <workItem from="1533870870867" duration="3227000" />
+      <workItem from="1534214696721" duration="8769000" />
+      <workItem from="1534316321931" duration="6355000" />
+      <workItem from="1534390653993" duration="1853000" />
+      <workItem from="1534416150224" duration="3104000" />
+      <workItem from="1534473533905" duration="3507000" />
+      <workItem from="1534733792845" duration="21852000" />
+      <workItem from="1535092455435" duration="16239000" />
+      <workItem from="1535962487221" duration="3827000" />
+      <workItem from="1536748882481" duration="672000" />
+      <workItem from="1536824736772" duration="363000" />
+      <workItem from="1537322338410" duration="3667000" />
+      <workItem from="1537866953488" duration="4222000" />
+      <workItem from="1537947105609" duration="7132000" />
+      <workItem from="1538101708784" duration="1830000" />
+      <workItem from="1538132488936" duration="1358000" />
+      <workItem from="1538214709641" duration="12526000" />
+      <workItem from="1539570909729" duration="493000" />
+      <workItem from="1539651839213" duration="1037000" />
+      <workItem from="1539745826133" duration="8854000" />
+      <workItem from="1539826286579" duration="17364000" />
+      <workItem from="1540176765680" duration="20943000" />
+      <workItem from="1540262252671" duration="1464000" />
+      <workItem from="1540350364858" duration="1400000" />
+      <workItem from="1540523501055" duration="5433000" />
+      <workItem from="1540891917397" duration="1547000" />
+      <workItem from="1540954190322" duration="3475000" />
+      <workItem from="1541642214869" duration="632000" />
+      <workItem from="1541725562583" duration="14000" />
+      <workItem from="1542248121532" duration="10243000" />
+      <workItem from="1542780546329" duration="890000" />
+      <workItem from="1542934962851" duration="18328000" />
+      <workItem from="1543021225619" duration="5468000" />
+      <workItem from="1543368758939" duration="19462000" />
+      <workItem from="1543977487202" duration="8231000" />
+      <workItem from="1544434192374" duration="6534000" />
+      <workItem from="1544669024393" duration="5398000" />
+      <workItem from="1544840246979" duration="1381000" />
+      <workItem from="1545026904288" duration="2412000" />
+      <workItem from="1545311779701" duration="687000" />
+      <workItem from="1545361752752" duration="5341000" />
+      <workItem from="1545383258073" duration="932000" />
+      <workItem from="1545896863146" duration="1835000" />
+      <workItem from="1546049595492" duration="53000" />
+      <workItem from="1546051813686" duration="6766000" />
+      <workItem from="1547619203159" duration="657000" />
+      <workItem from="1547688116907" duration="1896000" />
+      <workItem from="1548237233974" duration="2645000" />
+      <workItem from="1548745006457" duration="1677000" />
+      <workItem from="1550630803054" duration="5379000" />
+      <workItem from="1551142841087" duration="3716000" />
+      <workItem from="1551404502405" duration="492000" />
+      <workItem from="1551689586231" duration="813000" />
+      <workItem from="1552360577103" duration="1780000" />
+      <workItem from="1552460631949" duration="3164000" />
+      <workItem from="1552621180646" duration="2307000" />
+      <workItem from="1556421484646" duration="843000" />
+      <workItem from="1557468405161" duration="30904000" />
+      <workItem from="1557971425353" duration="1169000" />
+      <workItem from="1557987983688" duration="748000" />
+      <workItem from="1558077213916" duration="472000" />
+      <workItem from="1558078203191" duration="1046000" />
+      <workItem from="1558402175282" duration="20000" />
+      <workItem from="1559725280628" duration="4298000" />
+      <workItem from="1563780240415" duration="4063000" />
+      <workItem from="1567395581596" duration="682000" />
+      <workItem from="1567757884010" duration="592000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TestReadExcel_in_newknowlage_excel - 2019.06.05 at 17h 11m 10s.xml">
+      <configuration name="TestReadExcel in newknowlage/excel" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestReadExcel_in_newknowlage_excel - 2019.06.05 at 17h 12m 22s.xml">
+      <configuration name="TestReadExcel in newknowlage/excel" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestReadExcel_in_newknowlage_excel - 2019.06.05 at 17h 12m 44s.xml">
+      <configuration name="TestReadExcel in newknowlage/excel" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestReadExcel_in_newknowlage_excel - 2019.06.05 at 17h 13m 04s.xml">
+      <configuration name="TestReadExcel in newknowlage/excel" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestReadExcel_in_newknowlage_excel - 2019.06.05 at 17h 15m 08s.xml">
+      <configuration name="TestReadExcel in newknowlage/excel" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestReadExcel_in_newknowlage_excel - 2019.06.05 at 17h 30m 55s.xml">
+      <configuration name="TestReadExcel in newknowlage/excel" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestReadExcel_in_newknowlage_excel - 2019.06.05 at 17h 31m 18s.xml">
+      <configuration name="TestReadExcel in newknowlage/excel" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestReadExcel_in_newknowlage_excel - 2019.06.05 at 17h 48m 00s.xml">
+      <configuration name="TestReadExcel in newknowlage/excel" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestReadExcel_in_newknowlage_excel - 2019.06.05 at 17h 50m 21s.xml">
+      <configuration name="TestReadExcel in newknowlage/excel" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestReadExcel_in_newknowlage_excel - 2019.06.05 at 17h 53m 18s.xml">
+      <configuration name="TestReadExcel in newknowlage/excel" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="770657000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="19" y="68" width="1729" height="1005" extended-state="1" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.77747256" visible="true" weight="0.18034752" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" sideWeight="0.22252747" side_tool="true" weight="0.54471546" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Structure" order="6" sideWeight="0.46572104" side_tool="true" weight="0.38968253" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.37906137" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49902153" weight="0.3586207" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.26326743" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32778355" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32778355" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49920633" visible="true" weight="0.24367817" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50097847" side_tool="true" weight="0.37239164" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.77747256" visible="true" weight="0.3314917" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" sideWeight="0.22252747" side_tool="true" weight="0.54471546" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Structure" order="6" sideWeight="0.46572104" side_tool="true" weight="0.38968253" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.37906137" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49902153" weight="0.26742977" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.26326743" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32778355" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32778355" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49920633" visible="true" weight="0.2466181" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50097847" side_tool="true" weight="0.37239164" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/../github.com/go-sql-driver/mysql/fields.go</url>
+          <line>117</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/test/redis.go</url>
+          <line>26</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/test/redis.go</url>
+          <line>27</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/boom/set.go</url>
+          <line>106</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test/RMMtest.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/mysqltest.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Map.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/cmdtest.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/accesstest.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/hotel/Hotel.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTTP/GetIPAddress/define.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTTP/GetIPAddress/Address_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/petermattis/goid/goid_go1.5_amd64.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nqc.cn/fmt/fmt.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Go64/src/testing/testing.go" />
+    <entry file="file://$PROJECT_DIR$/HTTP/GetIPAddress/Address.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Go64/src/fmt/scan.go" />
+    <entry file="file://$PROJECT_DIR$/boom/Mine_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ProjectManage/config/Util.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="469" column="5" selection-start-line="469" selection-start-column="5" selection-end-line="469" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2048/prin.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="83" column="16" lean-forward="true" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/mattn/go-runewidth/runewidth.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="1197" column="5" selection-start-line="1197" selection-start-column="5" selection-end-line="1197" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2048/2048-go.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="94" selection-start-line="94" selection-end-line="110" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/snake/snakke.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="383" column="14" selection-start-line="383" selection-start-column="14" selection-end-line="383" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Go64/src/builtin/builtin.go" />
+    <entry file="file://D:/Go64/src/math/rand/rand.go" />
+    <entry file="file://D:/Go64/src/time/tick.go" />
+    <entry file="file://$PROJECT_DIR$/../github.com/nsf/termbox-go/termbox_windows.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="376" column="4" selection-start-line="376" selection-start-column="4" selection-end-line="376" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boom.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boom/set.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boom/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/nsf/termbox-go/api_common.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="143" column="4" selection-start-line="143" selection-start-column="4" selection-end-line="143" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/nsf/termbox-go/api_windows.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Go64/src/runtime/asm_amd64.s" />
+    <entry file="file://D:/Go64/src/fmt/print.go" />
+    <entry file="file://D:/Go64/src/sync/pool.go" />
+    <entry file="file://D:/Go64/src/runtime/proc.go" />
+    <entry file="file://$PROJECT_DIR$/boom/printf.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="76" column="33" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pprof/heap_2019_05_16_09_51_23.prof" />
+    <entry file="file://$PROJECT_DIR$/pprof/cpu_2019_05_16_09_51_23.prof" />
+    <entry file="file://D:/Go64/src/runtime/mprof.go" />
+    <entry file="file://D:/Go64/src/runtime/pprof/pprof.go" />
+    <entry file="file://$PROJECT_DIR$/../github.com/CYL96/MySDK/mypprof/mypprof.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pprof/cpu_2019_05_16_09_53_58.prof" />
+    <entry file="file://$PROJECT_DIR$/pprof/cpu_2019_05_16_09_53_20.prof" />
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsql2/XsqlTool.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xsql2/execute.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/import.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="65" column="55" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/gui.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/main.manifest">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/excel_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pprof/cpu.prof">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pprof/heap.prof">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boom/run.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proxy/httpproxy.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="62" column="42" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>newknowlage</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

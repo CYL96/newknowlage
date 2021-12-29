@@ -1,0 +1,27 @@
+
+/***********************------------------------------------------------------------------------------------------------------------------------
+2018-11-29 20:10:47[
+2018-11-29 20:10:47 
+error: Error 1406: Data too long for column 'phone' at row 1
+ goroutine 1 [running]:
+runtime/debug.Stack(0xc04206b500, 0x1, 0x1)
+	D:/Go64/src/runtime/debug/stack.go:24 +0xae
+nqc.cn/log.InitListner(0x0, 0x0)
+	D:/work/src/nqc.cn/log/log.go:139 +0x242
+panic(0x7fbda0, 0xc042002100)
+	D:/Go64/src/runtime/panic.go:491 +0x291
+nqc.cn/log.Write(0xa74080, 0xc042002100)
+	D:/work/src/nqc.cn/log/log.go:145 +0x85
+nqc.cn/xsql.checkErr(0xa74080, 0xc042002100)
+	D:/work/src/nqc.cn/xsql/xsql.go:853 +0x4b
+nqc.cn/xsql.(*XSqlOrder).Execute(0xc0420faba0, 0x0, 0x0, 0x0)
+	D:/work/src/nqc.cn/xsql/xsql.go:1215 +0x484
+nqc.cn/sms.SendMsg(0x88628b, 0x23, 0x874596, 0x4, 0x873f2e, 0x4, 0x873f00)
+	D:/work/src/nqc.cn/sms/sms.go:194 +0x110e
+main.main()
+	D:/work/src/newknowlage/main.go:213 +0x18b
+
+] 
+------------------------------------------------------------------------------------------------------------------------***********************/
+数据库执行错误： runtime error: invalid memory address or nil pointer dereference
+true

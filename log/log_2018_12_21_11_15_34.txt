@@ -1,0 +1,24 @@
+
+/***********************------------------------------------------------------------------------------------------------------------------------
+2018-12-21 11:15:34[
+2018-12-21 11:15:34 
+error: dial tcp :0: connectex: The requested address is not valid in its context.
+ goroutine 1 [running]:
+runtime/debug.Stack(0xc04206bb48, 0x1, 0x1)
+	D:/Go64/src/runtime/debug/stack.go:24 +0xae
+nqc.cn/log.InitListner(0x0, 0x0)
+	D:/work/src/nqc.cn/log/log.go:139 +0x242
+panic(0x817800, 0xc0421fe050)
+	D:/Go64/src/runtime/panic.go:491 +0x291
+nqc.cn/log.Write(0xa7f4a0, 0xc0421fe050)
+	D:/work/src/nqc.cn/log/log.go:145 +0x85
+nqc.cn/xsql.checkErr(0xa7f4a0, 0xc0421fe050)
+	D:/work/src/nqc.cn/xsql/xsql.go:1009 +0x4b
+nqc.cn/xsql.(*XSqlOrder).Execute(0xc0420fcae0, 0x0, 0x0, 0x0)
+	D:/work/src/nqc.cn/xsql/xsql.go:1371 +0x484
+main.main()
+	D:/work/src/newknowlage/main.go:84 +0x217
+
+] 
+------------------------------------------------------------------------------------------------------------------------***********************/
+数据库执行错误： runtime error: invalid memory address or nil pointer dereference

@@ -1,0 +1,28 @@
+
+/***********************------------------------------------------------------------------------------------------------------------------------
+2018-11-23 18:02:14[
+2018-11-23 18:02:14 
+error: dial tcp :0: connectex: The requested address is not valid in its context.
+ goroutine 1 [running]:
+runtime/debug.Stack(0xc04206b7d0, 0x1, 0x1)
+	D:/Go64/src/runtime/debug/stack.go:24 +0xae
+nqc.cn/log.InitListner(0x0, 0x0)
+	D:/work/src/nqc.cn/log/log.go:139 +0x242
+panic(0x8280c0, 0xc042088a00)
+	D:/Go64/src/runtime/panic.go:491 +0x291
+nqc.cn/log.Write(0xa9d5c0, 0xc042088a00)
+	D:/work/src/nqc.cn/log/log.go:145 +0x85
+nqc.cn/xsql.checkErr(0xa9d5c0, 0xc042088a00)
+	D:/work/src/nqc.cn/xsql/xsql.go:853 +0x4b
+nqc.cn/xsql.(*XSqlOrder).Execute(0xc0420f2b40, 0x0, 0x0, 0x0)
+	D:/work/src/nqc.cn/xsql/xsql.go:1215 +0x484
+ProjectManage/v2/finance.getFinanceTableData(0xc0421fa060, 0x14, 0x1, 0x894cf1, 0xa, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	D:/work/src/ProjectManage/v2/finance/tableBuild.go:67 +0x123
+ProjectManage/v2/finance.GetFinanceTableData(0x892755, 0x7, 0x894cf1, 0xa, 0x1, 0xa9f000, 0x100042173240, 0x8)
+	D:/work/src/ProjectManage/v2/finance/tableBuild.go:47 +0x2d8
+main.main()
+	D:/work/src/newknowlage/main.go:44 +0x83
+
+] 
+------------------------------------------------------------------------------------------------------------------------***********************/
+数据库执行错误： runtime error: invalid memory address or nil pointer dereference
