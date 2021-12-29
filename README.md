@@ -1,8 +1,5 @@
 # <center>newknowlage</center>
-
-## xsql
-
-基于https://github.com/NiuStar/xsql 的二次封装，解决SQL注入与XSS注入。
+关于golang 学习的一些参考
 
 ## translate
 
