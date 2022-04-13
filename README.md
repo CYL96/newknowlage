@@ -30,7 +30,7 @@ HTTP下载小程序，单线程，无断点再续，单文件。
 基于golang，开发的带gui的闯关小游戏(目前显示战斗记录还有一些问题)
 
 ## 8.[ipAddr](https://github.com/CYL96/newknowlage/tree/master/ipAddr)
-通过ip获取地理位置
+通过ip [ip.taobao.com](https://ip.taobao.com/) 接口获取地理位置
 
 ## 9.[ipToAddr](https://github.com/CYL96/newknowlage/tree/master/ipToAddr)
 通过ip获取地理位置，使用 [纯真ip离线库](https://www.cz88.net/) 进行解析，使用golang实现
