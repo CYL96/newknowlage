@@ -10,7 +10,7 @@ import (
 )
 
 type IpAddressTaoBao struct {
-	Ip        string `json:"ip"`
+	Ip        string `json:"ipToAddr"`
 	Country   string `json:"country"`
 	Area      string `json:"area"`
 	Region    string `json:"region"`
@@ -33,12 +33,12 @@ func GetAddressByIPTaoBao(ip string) (ResponseTaoBao, error) {
 	var data ResponseTaoBao
 	var err error
 
-	url := "https://ip.taobao.com/outGetIpInfo"
+	url := "https://ipToAddr.taobao.com/outGetIpInfo"
 
 	payload := &bytes.Buffer{}
 	writer := multipart.NewWriter(payload)
 
-	_ = writer.WriteField("ip", ip)
+	_ = writer.WriteField("ipToAddr", ip)
 	_ = writer.WriteField("accessKey", "alibaba-inc")
 	err = writer.Close()
 

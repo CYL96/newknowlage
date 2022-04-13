@@ -1,4 +1,4 @@
-package main
+package ipToAddr
 
 import (
 	"encoding/binary"
@@ -20,7 +20,7 @@ type IpInfoExt struct {
 	Match bool   `json:"match" comment:"是否匹配到ip地址"`
 	Ip    string `json:"ip" comment:"ip地址"`
 	City  string `json:"city" comment:"城市"`
-	Area  string `json:"city" comment:"区域"`
+	Area  string `json:"area" comment:"区域"`
 }
 
 func (this *IpSt) Init(filePath string) (err error) {
@@ -152,27 +152,27 @@ func (this *IpSt) GetContent(index int64) (string, int64) {
 func IpStrToLong(ip string) (ipNum int64, err error) {
 	ipS := strings.Split(ip, ".")
 	if len(ipS) != 4 {
-		err = fmt.Errorf("ip format error")
+		err = fmt.Errorf("ipToAddr format error")
 		return
 	}
 	ip_0, _ := strconv.Atoi(ipS[0])
 	if ip_0 < 0 || ip_0 > 255 {
-		err = fmt.Errorf("ip format error")
+		err = fmt.Errorf("ipToAddr format error")
 		return
 	}
 	ip_1, _ := strconv.Atoi(ipS[1])
 	if ip_1 < 0 || ip_1 > 255 {
-		err = fmt.Errorf("ip format error")
+		err = fmt.Errorf("ipToAddr format error")
 		return
 	}
 	ip_2, _ := strconv.Atoi(ipS[2])
 	if ip_2 < 0 || ip_2 > 255 {
-		err = fmt.Errorf("ip format error")
+		err = fmt.Errorf("ipToAddr format error")
 		return
 	}
 	ip_3, _ := strconv.Atoi(ipS[3])
 	if ip_3 < 0 || ip_3 > 255 {
-		err = fmt.Errorf("ip format error")
+		err = fmt.Errorf("ipToAddr format error")
 		return
 	}
 	ipNum = int64(ip_0)<<24 + int64(ip_1)<<16 + int64(ip_2)<<8 + int64(ip_3)
