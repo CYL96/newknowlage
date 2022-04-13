@@ -33,4 +33,4 @@ HTTP下载小程序，单线程，无断点再续，单文件。
 通过ip获取地理位置
 
 ## 9.[ipToAddr](https://github.com/CYL96/newknowlage/tree/master/ipToAddr)
-通过ip获取地理位置，使用 纯真ip离线 库进行解析，使用golang实现
+通过ip获取地理位置，使用 [纯真ip离线库](https://www.cz88.net/) 进行解析，使用golang实现
