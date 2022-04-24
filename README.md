@@ -14,6 +14,8 @@ GO的终端翻译小程序
 
 ## 3.[boom](https://github.com/CYL96/newknowlage/tree/master/boom)
 用golang 在命令行实现扫雷游戏
+### 3.1 [boom-gui](https://github.com/CYL96/newknowlage/tree/master/boom-gui)
+使用golang 在gui页面实现扫雷游戏
 
 ## 4.[download](https://github.com/CYL96/newknowlage/tree/master/download)
 

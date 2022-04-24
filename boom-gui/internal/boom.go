@@ -18,9 +18,11 @@ func BoomButton(x, y int) func() {
 		return func() {}
 	}
 	return func() {
-		RunGame.Area[x][y].Bt.Disable()
 		switch Action {
 		case 1:
+			if RunGame.Area[x][y].Show == 2 {
+				return
+			}
 			RunGame.Area[x][y].Show = 1
 			if RunGame.Area[x][y].Index == -1 {
 				RunGame.Area[x][y].Bt.SetIcon(Img_mine)
@@ -28,10 +30,11 @@ func BoomButton(x, y int) func() {
 			} else {
 				RunGame.OpenZeroItem(x, y)
 			}
+			RunGame.Area[x][y].Bt.Disable()
 		case 2:
 			if RunGame.Area[x][y].Show == 2 {
 				RunGame.Area[x][y].Show = 0
-				RunGame.Area[x][y].Bt.SetIcon(Img_flag)
+				RunGame.Area[x][y].Bt.SetIcon(Img_invisible)
 			} else {
 				RunGame.Area[x][y].Show = 2
 				RunGame.Area[x][y].Bt.SetIcon(Img_flag)
@@ -42,7 +45,8 @@ func BoomButton(x, y int) func() {
 		default:
 			return
 		}
-		if RunGame.TotalBoom == RunGame.LeftItem+RunGame.TotalBoom {
+
+		if RunGame.LeftItem == RunGame.TotalBoom {
 			RunGame.GameSuccess()
 		}
 	}
@@ -82,6 +86,13 @@ func (this *MyGuiExt) Reset() {
 	this.ToolBt[1].Disable()
 	this.ToolBt[2].Enable()
 	this.ToolBt[3].Enable()
+	if this.Size < 5 {
+		this.Size = 5
+	}
+	if this.Size >= 30 {
+		this.Size = 30
+	}
+	this.LeftItem = this.Size * this.Size
 	this.SetMine()
 	this.SetGui()
 }
