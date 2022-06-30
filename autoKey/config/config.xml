@@ -1,0 +1,21 @@
+<?xml version ="1.0" encoding="utf-8"?>
+<config ver="1.0.2.1">
+    <hot_key echo="热键配置">
+        <name  echo="名称">测试</name>
+        <key echo="按键绑定">ctrl,shift,1</key>
+        <account echo="账号">123</account>
+        <pwd echo="密码">6666</pwd>
+    </hot_key>
+    <hot_key echo="热键配置2">
+        <name  echo="名称">测试2</name>
+        <key echo="按键绑定">ctrl,shift,2</key>
+        <account echo="账号">12345</account>
+        <pwd echo="密码">6666</pwd>
+    </hot_key>
+    <hot_key echo="热键配置3">
+        <name  echo="名称">测试5</name>
+        <key echo="按键绑定">ctrl,shift,3</key>
+        <account echo="账号">12345</account>
+        <pwd echo="密码">6666</pwd>
+    </hot_key>
+</config>
