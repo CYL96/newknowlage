@@ -29,7 +29,7 @@ func registerKey() {
 func getFunc(account, pwd string) func(hook.Event) {
 	return func(e hook.Event) {
 		fmt.Println("识别")
-		time.Sleep(1 * time.Second)
+		time.Sleep(150 * time.Millisecond)
 		robotgo.TypeStr(account)
 		robotgo.KeyDown("tab")
 		time.Sleep(50 * time.Millisecond)
