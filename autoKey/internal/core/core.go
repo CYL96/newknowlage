@@ -20,9 +20,13 @@ func Run() {
 	for {
 		select {
 		case key := <-ConfigCh:
-			if key == CONFIG_CHANGE {
+			switch key {
+			case CONFIG_CHANGE:
 				robotgo.EventEnd()
 				go Register()
+			case CONFIG_ERROR:
+				robotgo.EventEnd()
+				return
 			}
 		}
 	}

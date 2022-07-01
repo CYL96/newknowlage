@@ -53,13 +53,14 @@ func CheckConfig() {
 			time.Sleep(5 * time.Second)
 		} else {
 			if unix != configTime {
-				fmt.Println("配置文件发生变化：")
+				fmt.Println("配置文件发生变化：", time.Now().Format("2006-01-02 15:04:05"))
 				configTime = unix
 				// 	说明文件发生变动了
 				err := InitConfig()
 				if err != nil {
 					fmt.Println(err.Error())
-					os.Exit(2)
+					ConfigCh <- CONFIG_ERROR
+					return
 				}
 				ConfigCh <- CONFIG_CHANGE
 			}

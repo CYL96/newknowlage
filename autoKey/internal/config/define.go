@@ -18,5 +18,6 @@ type HotKeyExt struct {
 type RunType int
 
 const (
+	CONFIG_ERROR  RunType = -1
 	CONFIG_CHANGE RunType = 1
 )

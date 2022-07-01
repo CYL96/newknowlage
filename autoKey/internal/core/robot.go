@@ -22,13 +22,13 @@ func registerKey() {
 	for _, ext := range config.HotKey {
 		keys := strings.Split(ext.Key, ",")
 		fmt.Println("注册:", ext.Name, keys, ":", ext.Account, ext.Pwd)
-		robotgo.EventHook(hook.KeyDown, keys, getFunc(ext.Account, ext.Pwd))
+		robotgo.EventHook(hook.KeyDown, keys, getFunc(ext.Name, ext.Account, ext.Pwd))
 	}
 }
 
-func getFunc(account, pwd string) func(hook.Event) {
+func getFunc(name, account, pwd string) func(hook.Event) {
 	return func(e hook.Event) {
-		fmt.Println("识别")
+		fmt.Println("识别:", name)
 		time.Sleep(150 * time.Millisecond)
 		robotgo.TypeStr(account)
 		robotgo.KeyDown("tab")
