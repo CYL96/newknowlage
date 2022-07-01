@@ -8,6 +8,7 @@ import (
 	. "newknowlage/autoKey/internal/config"
 )
 
+// Run 运行函数入口
 func Run() {
 	InitConfigCh()
 	err := InitConfig()

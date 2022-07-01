@@ -11,12 +11,14 @@ import (
 	. "newknowlage/autoKey/internal/config"
 )
 
+// Register 注册按键绑定函数入口
 func Register() {
 	registerKey()
 	s := robotgo.EventStart()
 	<-robotgo.EventProcess(s)
 }
 
+// registerKey 获取配置文件。将配置的按键进行绑定
 func registerKey() {
 	config := GetConfig()
 	for _, ext := range config.HotKey {
@@ -26,6 +28,7 @@ func registerKey() {
 	}
 }
 
+// getFunc 获取对应热键绑定的执行函数
 func getFunc(name, account, pwd string) func(hook.Event) {
 	return func(e hook.Event) {
 		fmt.Println("识别:", name)

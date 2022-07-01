@@ -13,12 +13,17 @@ var Config *ConfigExt
 var configTime int64
 var ConfigCh chan RunType
 
+// GetConfig 获取当前配置文件
 func GetConfig() *ConfigExt {
 	return Config
 }
+
+// InitConfigCh 初始化配置文件channel
 func InitConfigCh() {
 	ConfigCh = make(chan RunType)
 }
+
+// InitConfig 初始化配置文件
 func InitConfig() error {
 	Config = new(ConfigExt)
 	data, err := ioutil.ReadFile("./config/config.xml")
@@ -36,6 +41,7 @@ func InitConfig() error {
 	return nil
 }
 
+// GetConfigTime 获取当前配置文件的时间
 func GetConfigTime() int64 {
 	f, err := os.Stat("./config/config.xml")
 	if err != nil {
@@ -45,6 +51,7 @@ func GetConfigTime() int64 {
 	return f.ModTime().Unix()
 }
 
+// CheckConfig 定时检查配置文件，更新绑定按键
 func CheckConfig() {
 	for {
 		time.Sleep(3 * time.Second)
