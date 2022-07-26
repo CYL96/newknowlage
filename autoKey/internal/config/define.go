@@ -5,8 +5,13 @@ import "encoding/xml"
 type ConfigExt struct {
 	XMLNAme xml.Name    `xml:"config"`
 	HotKey  []HotKeyExt `xml:"hot_key"`
+	Run     RunExt      `xml:"run"`
 }
 
+type RunExt struct {
+	XMLNAme   xml.Name `xml:"run"`
+	AfterTime int      `xml:"after_time"`
+}
 type HotKeyExt struct {
 	XMLNAme xml.Name `xml:"hot_key"`
 	Name    string   `xml:"name"`

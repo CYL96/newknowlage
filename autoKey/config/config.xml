@@ -1,5 +1,8 @@
 <?xml version ="1.0" encoding="utf-8"?>
 <config ver="1.0.2.1">
+    <run echo="运行配置">
+        <after_time echo="按下xx毫秒后启动脚本">500</after_time>
+    </run>
     <hot_key echo="热键配置">
         <name  echo="名称">测试</name>
         <key echo="按键绑定">ctrl,shift,1</key>
