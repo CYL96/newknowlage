@@ -2,7 +2,7 @@
 关于golang 学习的一些参考，可以用来练习golang语法。
 如果有侵权等问题，可以联系我删除。
 
-## [learn](https://github.com/CYL96/newknowlage/tree/master/learn)
+## [Learn](https://github.com/CYL96/newknowlage/tree/master/Learn)
 学习笔记
 
 ## 1.[translate](https://github.com/CYL96/newknowlage/tree/master/translate)
