@@ -2,6 +2,9 @@
 关于golang 学习的一些参考，可以用来练习golang语法。
 如果有侵权等问题，可以联系我删除。
 
+## [learn](https://github.com/CYL96/newknowlage/tree/master/learn)
+学习笔记
+
 ## 1.[translate](https://github.com/CYL96/newknowlage/tree/master/translate)
 
 GO的终端翻译小程序
@@ -39,3 +42,4 @@ HTTP下载小程序，单线程，无断点再续，单文件。
 
 ## 10.[autoKey](https://github.com/CYL96/newknowlage/tree/master/autoKey)
 基于robotgo实现的一键登录
+
