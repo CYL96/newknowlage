@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54c29617-d0a3-4420-83ab-252e8677007a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/学习笔记/泛型/desc.md" beforeDir="false" afterPath="$PROJECT_DIR$/Learn/泛型/desc.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/学习笔记/泛型/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Learn/泛型/main.go" afterDir="false" />
-    </list>
+    <list default="true" id="54c29617-d0a3-4420-83ab-252e8677007a" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
